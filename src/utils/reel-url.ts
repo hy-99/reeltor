@@ -15,7 +15,10 @@ function inferPlatform(url: URL): SupportedPlatform {
     return "direct";
   }
 
-  if (hostname === "instagram.com" && (pathname.startsWith("/reel/") || pathname.startsWith("/reels/"))) {
+  if (
+    hostname === "instagram.com" &&
+    (pathname.startsWith("/reel/") || pathname.startsWith("/reels/") || pathname.startsWith("/p/"))
+  ) {
     return "instagram";
   }
 
